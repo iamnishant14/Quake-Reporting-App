@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/earthquake_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="88dp"
+    android:orientation="horizontal"
+    android:paddingStart="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="36dp"
+        android:gravity="center"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/magnitude_circle"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        tools:text="8.9"/>
+
+    <LinearLayout
+        android:id="@+id/Loc"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/location_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/spacing"
+            android:paddingTop="@dimen/spacing"
+            android:ellipsize="end"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/textColorEarthquakeDetails"
+            tools:text="78 Km NW of"/>
+
+        <TextView
+            android:id="@+id/location_suf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/spacing"
+            android:textSize="16sp"
+            android:textColor="@color/textColorEarthquakeLocation"
+            android:layout_gravity="top"
+            android:textStyle="bold"
+            tools:text="OKlahoma, New Jersey, USA"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/textColorEarthquakeDetails"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        tools:text="26FEb 2016 16:09:10"
+        android:layout_weight="1"
+        />
+</LinearLayout>
